@@ -1,0 +1,732 @@
+/*CSS follows a strict format:
+selector{
+property: value;
+poperty: value;
+}
+The selector tells the browser which element is going to receive the styles rules, that are expressed as a list: 'property:value'. Each property needs to be separated with a semi-colon.
+It is possible to select more then one element, just separate them with an comma:
+selector 1,
+selector 2{
+property: value;
+}
+To select elements with a class use a full stop after the name of the element and write the class name, or just use a full stop and the
+class name to apply the style rules to all the elements in that class:
+selector.class{
+property: value;
+}
+or
+.class{
+property: value;
+}*/
+*{ /*The * selector selects all elements.The box-sizing property defines how the width and height of an element are calculated, in this case it will calculate including the content, padding and border*/
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Arial', sans-serif; /*this CSS rule was used to add the font to all the body's page*/
+  background-color: #FFFFFF; /*This rule in CSS is used to change the background colour*/
+  color: #1B1A17; /*The color rule in CSS is used to change the text colours*/
+}
+
+header{
+  z-index: 10;
+  position: relative;
+}
+header h1{
+  font-size: 9vw;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  letter-spacing: -1.8px;
+  padding-left: 5vw;
+  padding-top: 6vw;
+}
+header h1 a{
+  text-decoration: none;
+  color: #1B1A17;
+}
+.burger{
+  display: inline-block;
+  position: absolute;
+  top: 9.5vw;
+  right: 7vw;
+}
+.line1, .line2, .line3{
+  width: 9vw;
+  height: 0.6vh;
+  background-color: #1B1A17;
+  margin: 1vw;
+  border-radius: 8px;
+  transition: all .5s ease-in-out;
+}
+.change .line1{
+  -webkit-transform: rotate(-45deg) translate(-4px, 3px);
+  transform: rotate(-45deg) translate(-4px, 3px);
+}
+.change .line2{
+  opacity: 0;
+}
+.change .line3{
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+.work{
+  display: none;
+}
+nav{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  transition: right 0.5s ease-in;
+  bottom: 0;
+  right: -100%;
+}
+nav.active{
+  background-color: #FFFFFF;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  transition: right 0.5s ease-in;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+nav h1{
+  font-size: 9vw;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: -1.8px;
+  padding-left: 5vw;
+  padding-top: 6vw;
+}
+nav h1 a{
+  text-decoration: none;
+  color: #1B1A17;
+}
+.navbar{
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.navbar a{
+  text-decoration: none;
+  color: #1B1A17;
+  font-family: 'Playfair Display', serif;
+  font-size: 10vw;
+  line-height: 55px;
+  letter-spacing: -1px;
+}
+.socialmedialinks{
+  position: absolute;
+  bottom: 0;
+  margin-left: 35%;
+  margin-bottom: 5vh;
+}
+#instalogo,
+#twitterlogo{
+  width: 15%;
+  margin: 10px;
+}
+
+
+.background{
+  background: linear-gradient(-60deg, #9e0142, #5e4fa2, #fdae61 , #f46d43, #3288bd, #d53e4f, #abdda4, #66c2a5, #fee08b, #e6f598);
+  	background-size: 400% 400%;
+  	animation: gradient 15s ease infinite;
+  	height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+  /*background-image: url('../img/S/DSC_0213.jpg');
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.7;*/
+}
+.backgroundNav{
+  background: linear-gradient(-60deg, #9e0142, #5e4fa2, #fdae61 , #f46d43, #3288bd, #d53e4f, #abdda4, #66c2a5, #fee08b, #e6f598);
+  	background-size: 400% 400%;
+  	animation: gradient 15s ease infinite;
+  	height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+}
+.backgroundAudio,
+.backgroundAudio2{
+  background: linear-gradient(5deg, #9e0142, #5e4fa2, #fdae61 , #f46d43, #3288bd, #d53e4f, #abdda4, #66c2a5, #fee08b, #e6f598);
+  	background-size: 400% 400%;
+  	height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -10;
+    overflow: hidden;
+}
+.backgroundVideo,
+.backgroundVideo2{
+  background: linear-gradient(30deg, #9e0142, #5e4fa2, #fdae61 , #f46d43, #3288bd, #d53e4f, #abdda4, #66c2a5, #fee08b, #e6f598);
+    background-size: 400% 400%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -10;
+    overflow: hidden;
+}
+.backgroundPhotography,
+.backgroundPhotography2{
+  background: linear-gradient(50deg, #9e0142, #5e4fa2, #fdae61 , #f46d43, #3288bd, #d53e4f, #abdda4, #66c2a5, #fee08b, #e6f598);
+    background-size: 400% 400%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -10;
+    overflow: hidden;
+}
+.backgroundContact,
+.backgroundContact2{
+  background: linear-gradient(25deg, #9e0142, #5e4fa2, #fdae61 , #f46d43, #3288bd, #d53e4f, #abdda4, #66c2a5, #fee08b, #e6f598);
+    background-size: 400% 400%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -10;
+    overflow: hidden;
+}
+.backgroundAbout,
+.backgroundAbout2{
+  background: linear-gradient(75deg, #9e0142, #5e4fa2, #fdae61 , #f46d43, #3288bd, #d53e4f, #abdda4, #66c2a5, #fee08b, #e6f598);
+  	background-size: 400% 400%;
+  	height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -10;
+    overflow: hidden;
+}
+@keyframes gradient {
+  0% {
+		background-position: 0% 25%;
+	}
+  10%{
+    background-position: 0% 50%;
+  }
+  25%{
+    background-position: 0% 75%;
+  }
+	50% {
+		background-position: 100% 50%;
+	}
+  75%{
+    background-position: 100% 100%;
+  }
+  90%{
+    background-position: 25% 100%;
+  }
+	100% {
+		background-position: 0% 10%;
+	}
+}
+
+
+.options{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.options p{
+  text-align: center;
+}
+.v, .p{
+  margin-bottom: 40px;
+}
+.options a{
+  text-decoration: none;
+  color: #1B1A17;
+  font-family: 'Playfair Display', serif;
+  font-size: 10vw;
+  line-height: 55px;
+  letter-spacing: -1px;
+  font-weight: 500;
+  ;
+}
+
+.aboutp1{
+  padding-left: 25px;
+  padding-top: 30px;
+  margin-right: 50px;
+}
+.aboutp1 p{
+  font-weight: bold;
+}
+.socialmedialinks3{
+  padding-left: 25px;
+  padding-top: 15px;
+}
+#instalogo2{
+  width: 7%;
+}
+#twitterlogo2{
+  width: 7%;
+  margin-left: 5vw;
+}
+.maintext{
+  margin: 6vw;
+}
+
+.gallery{
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.column {
+  -ms-flex: 50%;
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+.column picture {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+.columnDifferent{
+  -ms-flex: 33.3333%;
+  flex: 33.3333%;
+  max-width: 33.3333%;
+  padding: 0 4px;
+}
+.columnDifferent picture{
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+@media screen and (max-width: 300px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.nextAndprevious{
+  display: flex;
+  justify-content: space-between;
+  margin: 5vw;
+}
+.nextAndprevious p a{
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 9vw;
+  color: #1B1A17;
+  font-weight: normal;
+}
+
+/*these rules were used to customize the background of the modal. The z-index was set to 11 so it above everything on the page.
+The overflow property specifies what should happen if content overflows an element's box, in this case, if overflow is clipped, a scroll bar should be added to see the rest of the content
+The modal has the width and height set to occupy the whole page*/
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #1B1A17;
+}
+/*the way used to place the image in the middle was by setting its top position to 50% and then transform the Y-axis to -50%.*/
+.modal-content{
+  position: relative;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90%; /*the width was set to 90% so it doesn't occupy the entire page's width*/
+}
+.close{ /*the 'X''s colour was set to white and it was placed on the top right corner of the page*/
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus { /*even though it can only be seen in the pc view, when hovered the X it is going to change colour*/
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+.slides{ /*the slides display is set to none but that it then change, on the JavaScript, when an image is pressed*/
+  display: none;
+}
+.prev,
+.next { /*these properties set the size, position and style of the next and previous buttons.*/
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none; /*The user-select property specifies whether the text of an element can be selected, the 'none' prevents text selection*/
+}
+.next {
+  right: 0; /*Position the "next button" to the right*/
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover { /*on the pc view, when hovered, the arrow gains a background colour*/
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.numbertext { /*style and postition the numbers on the top left of the image*/
+  color: #f2f2f2;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.videos{
+  margin: 5vw;
+  padding-top: 5vw;
+}
+.videos h2{
+  margin-bottom: 5vw;
+}
+.description{
+  margin-top: 5vw;
+  margin-bottom: 10vw;
+}
+.audios{
+  margin: 5vw;
+  padding-top: 5vw;
+}
+.audios h2{
+  margin-bottom: 5vw;
+}
+
+
+.contacttext{
+  padding-left: 25px;
+  padding-top: 30px;
+}
+.contactp{
+  font-weight: bold;
+  letter-spacing: -0.50px;
+  font-size: 5vw;
+}
+.containerform{ /*the container of the form was styled, a background colour was added as well as a border-radius to round the corners and a
+  box-shadow to increase the depth. Its position was set using the margin rule and its width was set to 70%, occupying almost the whole page.*/
+  padding: 10px;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+input[type=text], select, textarea { /*Style inputs with type="text", select elements and textareas*/
+  width: 100%;
+  padding: 12px;
+  border: 1px solid 'black';
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  box-sizing: border-box; /*Added to make sure that padding and width stays in place*/
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical; /*Allow the user to vertically resize the textarea (not horizontally)*/
+}
+input[type=submit]{ /*style the submit button a specific background colour and size*/
+  background-color: black;
+  color: #F6FFFF; /*colour of the text in the button*/
+  padding: 5px 15px;
+  border: none;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: 0;
+  cursor: pointer; /*the cursor changes to the pointer on the pc view to tell the visitor that it is possible to click on the button.*/
+}
+#status{ /*styling the status message and put its display to none. Once the button is pressed, with JavaScript, the display is going to change to 'block', showing the message.
+A transition was added to ease the the appearance of the phrase.*/
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 30px;
+  transition: all 0.5s ease;
+  display: none;
+}
+
+
+/*The @media rule is used in media queries to apply different styles for different media types/devices. Using media queries are a popular technique for delivering a responsive web design. The 'screen' value
+is used for computer screens, tablets, smartphones etc. The minimum height and width represent the minimum values that the display area has to have to receive the style inside this @media query.
+This rule was used mostly to create a responsive menu, meaning that there is a different menu for mobile view and pc view. Besides that main difference, the query was only used to change
+minor things like values of paddings, margins and font sizes. It was also used to add a pseudo-element, ':hover', to some of the buttons, links or headings.*/
+@media screen and (min-width: 700px) and (min-height: 650px){
+
+header{
+    z-index: 10;
+    position: relative;
+}
+header h1{
+  font-size: 3.5vw;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  letter-spacing: -1.8px;
+  padding-left: 3vw;
+  padding-top: 3vw;
+}
+header h1 a{
+  text-decoration: none;
+  color: #1B1A17;
+}
+
+
+.burger{
+    display: none;
+}
+
+nav{
+  height: 100%;
+  width: auto;
+  position: absolute;
+  z-index: 0;
+  transition: none;
+  bottom: auto;
+  right: 0;
+  top: 0;
+}
+.work{
+  display: block;
+}
+.backgroundNav{
+  display: none;
+}
+.backgroundAudio2{
+  display: none;
+}
+.backgroundVideo2{
+  display: none;
+}
+.backgroundPhotography2{
+  display: none;
+}
+.backgroundContact2{
+  display: none;
+}
+.backgroundAbout2{
+  display: none;
+}
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  transform: none;
+  text-align: left;
+  padding-right: 3vw;
+  padding-top: 4vw;
+  overflow-y: inherit;
+}
+.navbar a{
+  text-decoration: none;
+  color: #1B1A17;
+  font-family: 'Playfair Display', serif;
+  font-size: 3vw;
+  line-height: 55px;
+  letter-spacing: -1px;
+  margin-right: 4vw;
+}
+.navbar a:hover{
+opacity: 0.8;
+}
+.dropdown{
+  float: left;
+  overflow: hidden;
+}
+.work{
+  border: none;
+  outline: none;
+  background-color:inherit;
+  font-family: inherit;
+  text-decoration: none;
+  color: #1B1A17;
+  font-family: 'Playfair Display', serif;
+  font-size: 3vw;
+  line-height: 55px;
+  letter-spacing: -1px;
+  margin-right: 4vw;
+  cursor: pointer;
+}
+.work:hover{
+  opacity: 0.8;
+}
+.dropdown-content{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: top .3s;
+  padding-top: 30px;
+  z-index: 1;
+  display: none;
+}
+.dropdown-content a {
+  float: none;
+  padding-bottom: 30px;;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+}
+.dropdown:hover .dropdown-content{ /*The element>element selector is used to select elements with a specific parent. In this case is the <li> inside the <ul>.
+    The opacity and visibility values change to show the <ul>*/
+    display: block;
+}
+.socialmedialinks{
+  display: none;
+}
+
+
+.options{
+  display: flex;
+}
+.options p{
+  text-align: center;
+}
+.v, .p{
+  margin-right: 10vw;
+}
+.options a{
+  font-size: 3vw;
+}
+.options a:hover{
+  opacity: 0.8;
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #1B1A17;
+}
+.modal-content{
+  position: relative;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30%;
+}
+
+
+.nextAndprevious{
+  display: flex;
+  justify-content: space-between;
+  margin: 5vw;
+}
+.nextAndprevious p a{
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 3vw;
+  color: #1B1A17;
+  font-weight: normal;
+}
+
+
+.first, .second, .third{
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.second{
+  flex-direction: row-reverse;
+}
+.description{
+  padding: 25px;
+}
+.videos h2
+.audios h2{
+  margin-bottom: 2vw;
+}
+.videos video{
+  width: 50%;
+  height: auto;
+}
+
+.aboutp1{
+  padding-left: 70px;
+  padding-top: 40px;
+  margin-right: 50px;
+}
+.aboutp1 p{
+  font-size: 25px;
+  font-weight: bold;
+}
+.socialmedialinks3{
+  padding-left: 70px;
+  padding-top: 15px;
+}
+#instalogo2{
+  width: 3%;
+}
+#twitterlogo2{
+  width: 3%;
+  margin-left: 3vw;
+}
+.maintext{
+  margin-top: 4vw;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-bottom: 6vw;
+}
+.maintext p{
+  font-size: 20px;
+}
+.flex{
+  display:flex;
+  flex-direction: row-reverse;
+  margin-left: 8vw;
+  margin-top: 4vw;
+}
+
+
+.containerform{
+  width: 70%;
+}
+.contacttext{
+  padding-left: 70px;
+  padding-top: 40px;
+}
+.contactp{
+  font-weight: bold;
+  letter-spacing: -0.50px;
+  font-size: 1.9vw;
+}
