@@ -553,13 +553,15 @@ nav{
   overflow-y: inherit;
 }
 .navbar a{
-  text-decoration: none;
+	/*
+  //text-decoration: none;
   color: #1B1A17;
   font-family: 'Playfair Display', serif;
   font-size: 3vw;
   line-height: 55px;
   letter-spacing: -1px;
   margin-right: 4vw;
+	*/
 }
 .navbar a:hover{
 opacity: 0.8;
