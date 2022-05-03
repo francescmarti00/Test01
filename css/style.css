@@ -542,7 +542,7 @@ nav{
   display: flex;
   justify-content: space-around;
   margin: 0;
-  position: relative;
+  position: absolute;
   top: auto;
   left: auto;
   right: auto;
