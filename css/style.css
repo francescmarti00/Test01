@@ -539,7 +539,6 @@ nav{
   display: none;
 }
 .navbar{
-	/*
   display: flex;
   justify-content: space-around;
   margin: 0;
@@ -552,7 +551,6 @@ nav{
   padding-right: 3vw;
   padding-top: 4vw;
   overflow-y: inherit;
-	*/
 }
 .navbar a{
 	/*
