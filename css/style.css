@@ -464,7 +464,7 @@ header h1 a{
 nav{
   height: 100%;
   width: auto;
-  position: relative;
+  position: absolute;
   z-index: 0;
   transition: none;
   bottom: auto;
