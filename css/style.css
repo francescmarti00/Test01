@@ -76,54 +76,8 @@ header h1 a{
 .work{
   display: none;
 }
-nav{
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 5;
-  transition: right 0.5s ease-in;
-  bottom: 0;
-  right: -100%;
-}
-nav.active{
-  background-color: #FFFFFF;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 5;
-  transition: right 0.5s ease-in;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-}
-nav h1{
-  font-size: 9vw;
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  letter-spacing: -1.8px;
-  padding-left: 5vw;
-  padding-top: 6vw;
-}
-nav h1 a{
-  text-decoration: none;
-  color: #1B1A17;
-}
-.navbar{
-  margin: 0;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.navbar a{
-  text-decoration: none;
-  color: #1B1A17;
-  font-family: 'Playfair Display', serif;
-  font-size: 10vw;
-  line-height: 55px;
-  letter-spacing: -1px;
-}
+
+
 .socialmedialinks{
   position: absolute;
   bottom: 0;
